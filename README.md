@@ -38,33 +38,8 @@ This repository holds in progress work.
 `/notebooks` - put all notebooks here under your folder
 `/src` - any source code you need to import for your notebook to work
 
-<html>
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <meta name="Author" content="Made by 'tree'">
- <meta name="GENERATOR" content="tree v2.1.1 © 1996 - 2023 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro">
- <title>Directory Tree</title>
- <style type="text/css">
-  BODY { font-family : monospace, sans-serif;  color: black;}
-  P { font-family : monospace, sans-serif; color: black; margin:0px; padding: 0px;}
-  A:visited { text-decoration : none; margin : 0px; padding : 0px;}
-  A:link    { text-decoration : none; margin : 0px; padding : 0px;}
-  A:hover   { text-decoration: underline; background-color : yellow; margin : 0px; padding : 0px;}
-  A:active  { margin : 0px; padding : 0px;}
-  .VERSION { font-size: small; font-family : arial, sans-serif; }
-  .NORM  { color: black;  }
-  .FIFO  { color: purple; }
-  .CHAR  { color: yellow; }
-  .DIR   { color: blue;   }
-  .BLOCK { color: yellow; }
-  .LINK  { color: aqua;   }
-  .SOCK  { color: fuchsia;}
-  .EXEC  { color: green;  }
- </style>
-</head>
-<body>
-	<h3>Directory Tree</h3><p>
-	<a href="./">.</a><br>
+<h3>Directory Tree</h3><p>
+<a href="./">.</a><br>
 	├── <a href="./data/">data</a><br>
 	│   ├── <a href="./data/eval_student_summaries/">eval_student_summaries</a><br>
 	│   │   ├── <a href="./data/eval_student_summaries/prompts_test.csv">prompts_test.csv</a><br>
@@ -89,8 +64,6 @@ This repository holds in progress work.
 	│   └── <a href="./src/visualize/">visualize</a><br>
 	└── <a href="./tests/">tests</a><br>
 <br><br>
-</body>
-</html>
 
 ## Setup and Installation
 
