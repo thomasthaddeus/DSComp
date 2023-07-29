@@ -1,65 +1,134 @@
+"""data_prep.py
+
+This module contains functions for data preparation tasks like chunk counter.
+
+The functions in this module use the NLTK library to perform tasks like
+chunking sentences and finding the most common chunks. It is designed to
+prepare data for natural language processing tasks.
+
+Returns:
+    Various: Depending on the function called, could return different types
+    such as list or Counter.
+
+Examples:
+>>> data_prep = DataPrep()
+
+>>> # Now call the methods
+>>> data_prep.np_chunk_counter(my_chunked_sentences)
+>>> data_prep.vp_chunk_counter(my_chunked_sentences)
+>>> data_prep.word_sentence_tokenize(my_text)
+
+>>> DataPrep.np_chunk_counter(my_chunked_sentences)
+>>> DataPrep.vp_chunk_counter(my_chunked_sentences)
+>>> DataPrep.word_sentence_tokenize(my_text)
+"""
+
 from collections import Counter
 from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
 
-# function that pulls chunks out of chunked sentence and finds the most common chunks
-def np_chunk_counter(chunked_sentences):
 
-    # create a list to hold chunks
-    chunks = list()
+class DataPrep:
+    """
+    This class contains methods for data preparation tasks like chunk counter.
 
-    # for-loop through each chunked sentence to extract noun phrase chunks
-    for chunked_sentence in chunked_sentences:
-        for subtree in chunked_sentence.subtrees(filter=lambda t: t.label() == 'NP'):
-            chunks.append(tuple(subtree))
+    The methods in this class use the NLTK library to perform tasks like
+    chunking sentences and finding the most common chunks. It is designed to
+    prepare data for natural language processing tasks.
+    """
 
-    # create a Counter object
-    chunk_counter = Counter()
+    @staticmethod
+    def np_chunk_counter(chunked_sentences):
+        """
+        Counts the occurrences of noun phrase (NP) chunks in chunked sentences.
 
-    # for-loop through the list of chunks
-    for chunk in chunks:
-        # increase counter of specific chunk by 1
-        chunk_counter[chunk] += 1
+        This function extracts NP chunks from chunked sentences and counts their
+        occurrences using a Counter. It returns the Counter object, which maps each
+        NP chunk to its number of occurrences.
 
-    # return 30 most frequent chunks
-    return chunk_counter.most_common(30)
+        Args:
+            chunked_sentences (list): A list of chunked sentences from which to
+            extract NP chunks.
 
-# function that pulls chunks out of chunked sentence and finds the most common chunks
-def vp_chunk_counter(chunked_sentences):
+        Returns:
+            collections.Counter: A Counter object mapping each NP chunk to its
+            number of occurrences.
+        """
+        # create a list to hold chunks
+        chunks = list()
 
-    # create a list to hold chunks
-    chunks = list()
+        # for-loop through each chunked sentence to extract noun phrase chunks
+        for chnkd_sntc in chunked_sentences:
+            for subtree in chnkd_sntc.subtrees(filter=lambda t: t.label() == "NP"):
+                chunks.append(tuple(subtree))
 
-    # for-loop through each chunked sentence to extract verb phrase chunks
-    for chunked_sentence in chunked_sentences:
-        for subtree in chunked_sentence.subtrees(filter=lambda t: t.label() == 'VP'):
-            chunks.append(tuple(subtree))
+        # create a Counter object
+        chunk_counter = Counter()
 
-    # create a Counter object
-    chunk_counter = Counter()
+        # for-loop through the list of chunks
+        for chunk in chunks:
+            # increase counter of specific chunk by 1
+            chunk_counter[chunk] += 1
 
-    # for-loop through the list of chunks
-    for chunk in chunks:
-        # increase counter of specific chunk by 1
-        chunk_counter[chunk] += 1
+        # return 30 most frequent chunks
+        return chunk_counter.most_common(30)
 
-    # return 30 most frequent chunks
-    return chunk_counter.most_common(30)
+    @staticmethod
+    def vp_chunk_counter(chunked_sentences):
+        """
+        Counts the occurrences of verb phrase (VP) chunks in chunked sentences.
 
+        This function extracts VP chunks from chunked sentences and counts their
+        occurrences using a Counter. It returns the Counter object, which maps each
+        VP chunk to its number of occurrences.
 
-def word_sentence_tokenize(text):
+        Args:
+            chunked_sentences (list): A list of chunked sentences from which to
+            extract VP chunks.
 
-    # create a PunktSentenceTokenizer
-    sentence_tokenizer = PunktSentenceTokenizer(text)
+        Returns:
+            collections.Counter: A Counter object mapping each VP chunk to its
+            number of occurrences.
+        """
+        chunks = list()
 
-    # sentence tokenize text
-    sentence_tokenized = sentence_tokenizer.tokenize(text)
+        # for-loop through each chunked sentence to extract verb phrase chunks
+        for chnkd_sntc in chunked_sentences:
+            for subtree in chnkd_sntc.subtrees(filter=lambda t: t.label() == "VP"):
+                chunks.append(tuple(subtree))
 
-    # create a list to hold word tokenized sentences
-    word_tokenized = list()
+        # create a Counter object
+        chunk_counter = Counter()
 
-    # for-loop through each tokenized sentence in sentence_tokenized
-    for tokenized_sentence in sentence_tokenized:
-        # word tokenize each sentence and append to word_tokenized
-        word_tokenized.append(word_tokenize(tokenized_sentence))
+        # for-loop through the list of chunks
+        for chunk in chunks:
+            # increase counter of specific chunk by 1
+            chunk_counter[chunk] += 1
 
-    return word_tokenized
+        # return 30 most frequent chunks
+        return chunk_counter.most_common(30)
+
+    @staticmethod
+    def word_sentence_tokenize(text):
+        """
+        Tokenizes the text into words and sentences.
+
+        This function uses NLTK's PunktSentenceTokenizer to split the input text
+        into sentences and then tokenizes each sentence into words. The result is a
+        list of word-tokenized sentences.
+
+        Args:
+            text (str): The input text to tokenize.
+
+        Returns:
+            list: A list of word-tokenized sentences.
+        """
+        sentence_tokenizer = PunktSentenceTokenizer(text)
+        sentence_tokenized = sentence_tokenizer.tokenize(text)
+        word_tokenized = list()
+
+        # for-loop through each tokenized sentence in sentence_tokenized
+        for tokenized_sentence in sentence_tokenized:
+            # word tokenize each sentence and append to word_tokenized
+            word_tokenized.append(word_tokenize(tokenized_sentence))
+
+        return word_tokenized
