@@ -38,32 +38,33 @@ This repository holds in progress work.
 `/notebooks` - put all notebooks here under your folder
 `/src` - any source code you need to import for your notebook to work
 
+<code><div>
 <h3>Directory Tree</h3><p>
 <a href="./">.</a><br>
-	├── <a href="./data/">data</a><br>
-	│   ├── <a href="./data/eval_student_summaries/">eval_student_summaries</a><br>
-	│   │   ├── <a href="./data/eval_student_summaries/prompts_test.csv">prompts_test.csv</a><br>
-	│   │   ├── <a href="./data/eval_student_summaries/prompts_train.csv">prompts_train.csv</a><br>
-	│   │   ├── <a href="./data/eval_student_summaries/sample_submission.csv">sample_submission.csv</a><br>
-	│   │   ├── <a href="./data/eval_student_summaries/summaries_test.csv">summaries_test.csv</a><br>
-	│   │   └── <a href="./data/eval_student_summaries/summaries_train.csv">summaries_train.csv</a><br>
-	│   └── <a href="./data/json/">json</a><br>
-	├── <a href="./LICENSE">LICENSE</a><br>
-	├── <a href="./models/">models</a><br>
-	├── <a href="./notebooks/">notebooks</a><br>
-	│   └── <a href="./notebooks/sample_notebk.ipynb">sample_notebk.ipynb</a><br>
-	├── <a href="./README.md">README.md</a><br>
-	├── <a href="./requirements.txt">requirements.txt</a><br>
-	├── <a href="./sitemap.html">sitemap.html</a><br>
-	├── <a href="./src/">src</a><br>
-	│   ├── <a href="./src/evaluation/">evaluation</a><br>
-	│   ├── <a href="./src/prep/">prep</a><br>
-	│   │   ├── <a href="./src/prep/data_prep.py">data_prep.py</a><br>
-	│   │   └── <a href="./src/prep/text_prep.py">text_prep.py</a><br>
-	│   ├── <a href="./src/scripts/">scripts</a><br>
-	│   └── <a href="./src/visualize/">visualize</a><br>
-	└── <a href="./tests/">tests</a><br>
-<br><br>
+├── <a href="./data/">data</a><br>
+│   ├── <a href="./data/eval_student_summaries/">eval_student_summaries</a><br>
+│   │   ├── <a href="./data/eval_student_summaries/prompts_test.csv">prompts_test.csv</a><br>
+│   │   ├── <a href="./data/eval_student_summaries/prompts_train.csv">prompts_train.csv</a><br>
+│   │   ├── <a href="./data/eval_student_summaries/sample_submission.csv">sample_submission.csv</a><br>
+│   │   ├── <a href="./data/eval_student_summaries/summaries_test.csv">summaries_test.csv</a><br>
+│   │   └── <a href="./data/eval_student_summaries/summaries_train.csv">summaries_train.csv</a><br>
+│   └── <a href="./data/json/">json</a><br>
+├── <a href="./LICENSE">LICENSE</a><br>
+├── <a href="./models/">models</a><br>
+├── <a href="./notebooks/">notebooks</a><br>
+│   └── <a href="./notebooks/sample_notebk.ipynb">sample_notebk.ipynb</a><br>
+├── <a href="./README.md">README.md</a><br>
+├── <a href="./requirements.txt">requirements.txt</a><br>
+├── <a href="./sitemap.html">sitemap.html</a><br>
+├── <a href="./src/">src</a><br>
+│   ├── <a href="./src/evaluation/">evaluation</a><br>
+│   ├── <a href="./src/prep/">prep</a><br>
+│   │   ├── <a href="./src/prep/data_prep.py">data_prep.py</a><br>
+│   │   └── <a href="./src/prep/text_prep.py">text_prep.py</a><br>
+│   ├── <a href="./src/scripts/">scripts</a><br>
+│   └── <a href="./src/visualize/">visualize</a><br>
+└── <a href="./tests/">tests</a><br>
+</div></code>
 
 ## Setup and Installation
 
