@@ -1,5 +1,7 @@
 # DS-Competition
 
+[![Pylint](https://github.com/thomasthaddeus/DS-Competition/actions/workflows/pylint.yml/badge.svg?branch=dev)](https://github.com/thomasthaddeus/DS-Competition/actions/workflows/pylint.yml)
+
 This repository holds in progress work.
 
 ## Distribution of Work
