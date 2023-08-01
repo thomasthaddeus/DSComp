@@ -5,5 +5,9 @@ seaborn
 matplotlib
 pandas
 numpy
-sklearn
+scikit-learn
 gensim
+
+transformers
+torch
+transformers[torch]
