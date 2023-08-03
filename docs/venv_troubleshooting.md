@@ -14,6 +14,7 @@ Ensure you have the following installed:
   1. **Error Code 1**
 
    Here is an image of an error recieved when attempting to activate the Virtual Environment
+![errorcode1](https://github.com/TheMightiestCaz/DS-Competition/assets/115377584/3297b24c-3930-4dc1-a767-f2f4a13259f4)
 
 
   
