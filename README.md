@@ -74,6 +74,8 @@ Instructions for setting up and installing any necessary software or libraries.
 
 Instructions for how to run the code.
 
+[How to setup the virtual environment.](./docs/venv_setup.md)
+
 ## License
 
 [MIT](./LICENSE)
