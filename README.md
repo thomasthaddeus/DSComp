@@ -28,11 +28,11 @@ This repository holds in progress work.
 
 <!-- Description of the project's directory structure and main files. -->
 
-`.github` - don't touch this folder
-`/data` - all data should be stored here
-`/models` - store learning models here
-`/notebooks` - put all notebooks here under your folder
-`/src` - any source code you need to import for your notebook to work
+- `.github`: don't touch this folder
+- `/data`: all data should be stored here
+- `/models`: store learning models here
+- `/notebooks`: put all notebooks here under your folder
+- `/src`: any source code you need to import for your notebook to work
 
 <code><div>
 <h3>Directory Tree</h3><p>
