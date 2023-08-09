@@ -3,7 +3,7 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: Mark stale issues and pull requests
+name: 'Mark stale issues and pull requests'
 
 on:
   schedule:
@@ -16,12 +16,13 @@ jobs:
     permissions:
       issues: write
       pull-requests: write
-
+    
     steps:
-    - uses: actions/stale@v5
+    - uses: actions/stale@v8
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-token: ${{ github.token }}
+        stale-pr-message: 'This pull request has been automatically marked as stale due to lack of activity. This is a gentle reminder to check if this PR is still relevant. If theres no further activity, it will be closed to keep the PR list manageable. Please update the PR or leave a comment if its still active.'
         stale-issue-message: 'This issue has been automatically marked as stale due to lack of activity for a prolonged period. If no further activity occurs, it will be automatically closed to keep the issue tracker clean and efficient. If you believe this is relevant and requires attention, please comment or update the issue.'
-        stale-pr-message: 'This pull request has been automatically marked as stale due to lack of activity. This is a gentle reminder to check if this PR is still relevant. If there's no further activity, it will be closed to keep the PR list manageable. Please update the PR or leave a comment if it's still active.'
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
+        days-before-stale: 60
