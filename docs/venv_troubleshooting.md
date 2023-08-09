@@ -16,18 +16,19 @@ To change the PowerShell execution policy on your Windows computer, use the Set-
 > **NOTE:**
 > In Windows Vista and later versions of Windows, to run commands that change the execution policy for the local computer, LocalMachine scope, start PowerShell with the Run as administrator option.
 
-To change your execution policy:
+To change your execution policy in PowerShell:
 
-PowerShell
-
-Copy
+```powershell
 Set-ExecutionPolicy -ExecutionPolicy <PolicyName>
+```
+Above is just an example code that you would have to change which Policy that you would like changed within the execution
+
 For example:
 
-PowerShell
-
-Copy
+```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
+Above is the command to change the execution policy for the local machine...this is what you want to do in order to run a virtual environment on Windows OS but have run into **Error Code 1**
 
 ## Error Codes when activating Virtual Environment in Windows OS
 
