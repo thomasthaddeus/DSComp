@@ -1,0 +1,34 @@
+name: Create Issues for Milestones
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create issue for Data Collection and Preprocessing
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Data Collection and Preprocessing',
+              body: 'Complete data collection and preprocessing by July 26.',
+              milestone: 1
+            });
+
+      - name: Create issue for Feature Engineering
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Feature Engineering',
+              body: 'Complete feature engineering by August 10.',
+              milestone: 2
+            });
+
+      # Add similar steps for the other milestones...
