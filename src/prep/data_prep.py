@@ -24,6 +24,7 @@ Examples:
 """
 
 from collections import Counter
+from typing import Any
 from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
 
 
@@ -35,6 +36,27 @@ class DataPrep:
     chunking sentences and finding the most common chunks. It is designed to
     prepare data for natural language processing tasks.
     """
+    def __init__(self, text):
+        self.text = text
+
+    def __setattr__(self, __name: str, __value: Any) -> None:
+        self._name = __name
+        self._value = __value
+
+    def main(self):
+        """
+        main _summary_
+
+        _extended_summary_
+
+        Returns:
+            _type_: _description_
+        """
+        data_prep = DataPrep(self.text)
+        data_prep.np_chunk_counter(self.chunked_sentences)
+        data_prep.vp_chunk_counter(self.chunked_sentences)
+        data_prep.word_sentence_tokenize(self.text)
+
 
     @staticmethod
     def np_chunk_counter(chunked_sentences):
