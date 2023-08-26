@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(192, 192, 192);
+    /* Bright light would affect the user's experience ,grey will be easy to go through */
+    /* margin: auto; */
+    margin-top: 0px;
+    margin-left: 20px;
+    padding: 5px;
+    height: 100vh;
+
+}
+
+h1 {
+    font-size: xxx-large;
+    text-decoration: 3px rgb(0, 0, 0) underline;
+    text-underline-offset: 0.6rem;
+}
+
+.tree {
+    font-size: 19px;
+
+
+}
+
+.site:hover {
+    background-color: greenyellow;
+    /* This color will attract the website by giving the green sign as a safe scroll */
+}
