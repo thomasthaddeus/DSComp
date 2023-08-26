@@ -20,8 +20,8 @@ This repository holds in progress work.
 
 ## Users
 
-1. Thad
-2. Eli
+1. Thad - Data Collection and Preprocessing Specialist
+2. Eli - Feature Engineer 
 3. Nicholas
 
 ## Project Structure
